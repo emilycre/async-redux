@@ -5,12 +5,13 @@ import {
 
 const logger = store => next => action => {
   console.log('Before reducer.', store.getState());
-
   next(action);
 
   console.log('After the reducer', store.getState());
 };
 
+
+// eslint-disable-next-line no-unused-vars
 const logger2 = store => next => action => {
   console.log('I am another Middleware.', action);
   next(action);
