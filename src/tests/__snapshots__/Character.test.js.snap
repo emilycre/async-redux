@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character component Render a character 1`] = `
+<section>
+  <img />
+  <p />
+</section>
+`;
