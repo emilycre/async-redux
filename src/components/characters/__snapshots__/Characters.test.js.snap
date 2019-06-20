@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Charactersss component Renders characters 1`] = `
+<ul>
+  <li
+    key="0001"
+  >
+    <Character
+      character={
+        Object {
+          "id": "0001",
+          "img": "/img",
+          "name": "Appa",
+        }
+      }
+    />
+  </li>
+</ul>
+`;
