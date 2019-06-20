@@ -1,8 +1,36 @@
-import React from 'react';
-import { render } from 'react-dom';
-import App from './components/App';
+import {
+  createStore,
+  applyMiddleware
+} from 'redux';
 
-render(
-  <App />,
-  document.getElementById('root')
+const logger = store => next => action => {
+  console.log('Before reducer.', store.getState());
+  next(action);
+
+  console.log('After the reducer', store.getState());
+};
+
+
+// eslint-disable-next-line no-unused-vars
+const logger2 = store => next => action => {
+  console.log('I am another Middleware.', action);
+  next(action);
+};
+
+function reducer(state = {}, action) {
+  switch(action.type) {
+    case 'Hello.':
+      return 'Hi...';
+    default:
+      return state;
+  }
+}
+
+const store = createStore(
+  reducer,
+  applyMiddleware(logger, logger2)
 );
+
+store.dispatch({
+  type: 'Hello.'
+});
