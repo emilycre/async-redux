@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Character from '../components/characters/Character';
+import Character from './Character';
 
 describe('Character component', () => {
   it('Render a character', () => {
