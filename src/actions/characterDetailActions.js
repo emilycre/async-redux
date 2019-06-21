@@ -1,9 +1,8 @@
 import { createAction } from 'promise-middleware-redux';
-import { getCharacters } from '../services/avatarApi';
+import { getCharacter } from '../services/avatarApi';
 
 export const [
-  fetchCharacters,
-  FETCH_CHARACTERS,
-  FETCH_CHARACTERS_LOADING,
-  FETCH_CHARACTERS_ERROR
-] = createAction('FETCH_CHARACTERS', getCharacters);
+  fetchCharacter,
+  FETCH_CHARACTER,
+  FETCH_CHARACTER_LOADING,
+] = createAction('FETCH_CHARACTER', getCharacter);

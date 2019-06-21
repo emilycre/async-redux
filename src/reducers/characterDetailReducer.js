@@ -1,7 +1,7 @@
 import {
   FETCH_CHARACTER,
   FETCH_CHARACTER_LOADING
-} from '../actions/characterActions';
+} from '../actions/characterDetailActions';
 
 const initialState = {
   character: null,
