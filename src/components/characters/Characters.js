@@ -23,3 +23,5 @@ Characters.propTypes = {
     img: PropTypes.string.isRequired
   })).isRequired
 };
+
+export default Characters;
